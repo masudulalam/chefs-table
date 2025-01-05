@@ -1,0 +1,56 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Chicken Stir-fry",
+      "recipe_image": "https://i.ibb.co.com/p3NCy16/26462.jpg",
+      "short_description": "A quick and easy stir-fry with chicken, vegetables, and a savory sauce.",
+      "ingredients": ["500g chicken breast", "2 tbsp soy sauce", "1 tbsp oyster sauce", "1 tbsp sesame oil", "2 cloves garlic", "1 onion", "1 bell pepper", "1 cup broccoli florets"],
+      "preparing_time": 15,
+      "calories": 350
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Spaghetti Carbonara",
+      "recipe_image": "https://i.ibb.co.com/LpdSy66/2509.jpg",
+      "short_description": "Classic Italian pasta dish with creamy sauce, pancetta, and eggs.",
+      "ingredients": ["200g spaghetti", "100g pancetta", "2 eggs", "1/2 cup heavy cream", "1/4 cup grated Parmesan cheese", "black pepper"],
+      "preparing_time": 25,
+      "calories": 600
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Vegetable Curry",
+      "recipe_image": "https://i.ibb.co.com/Mfdnh63/19906.jpg",
+      "short_description": "Flavorful and healthy curry with a variety of vegetables.",
+      "ingredients": ["1 onion", "2 cloves garlic", "1 inch ginger", "1 tbsp curry powder", "1 can coconut milk", "1 cup mixed vegetables (broccoli, carrots, peas, cauliflower)", "cilantro"],
+      "preparing_time": 30,
+      "calories": 280
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Chocolate Chip Cookies",
+      "recipe_image": "https://i.ibb.co.com/ZBjn95H/chocolate-chip-cookies-6952422-1280.jpg",
+      "short_description": "Soft and chewy cookies with chocolate chips.",
+      "ingredients": ["2 1/4 cups all-purpose flour", "1 teaspoon baking soda", "1 teaspoon salt", "1 cup (2 sticks) unsalted butter, softened", "3/4 cup granulated sugar", "3/4 cup packed brown sugar", "2 teaspoons vanilla extract", "2 large eggs", "2 cups chocolate chips"],
+      "preparing_time": 35,
+      "calories": 250 
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Caesar Salad",
+      "recipe_image": "https://i.ibb.co.com/kxY5kkd/6914.jpg",
+      "short_description": "Classic salad with romaine lettuce, croutons, and Caesar dressing.",
+      "ingredients": ["1 head romaine lettuce", "1/2 cup croutons", "1/4 cup grated Parmesan cheese", "2 anchovies", "1 clove garlic", "1 egg yolk", "1 tablespoon Dijon mustard", "1/4 cup olive oil", "lemon juice"],
+      "preparing_time": 10,
+      "calories": 180
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Beef Stew",
+      "recipe_image": "https://i.ibb.co.com/BsSSgpY/2149370829.jpg",
+      "short_description": "Hearty and flavorful stew with beef, vegetables, and herbs.",
+      "ingredients": ["1 lb beef chuck", "2 carrots", "2 potatoes", "1 onion", "2 cloves garlic", "1 bay leaf", "1 tbsp olive oil", "beef broth", "salt", "pepper"],
+      "preparing_time": 60,
+      "calories": 450
+    }
+  ]
