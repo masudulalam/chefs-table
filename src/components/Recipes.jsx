@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Recipes = () => {
+const Recipes = ({ handleAddRecipeToCookTable }) => {
 
     const [recipes, setRecipes] = useState([]);
 
@@ -9,14 +9,14 @@ const Recipes = () => {
             .then(res => res.json())
             .then(data => setRecipes(data))
     }, [])
-    console.log(recipes);
+    // console.log(recipes);
 
 
     return (
         <div className="md:w-2/3 grid grid-cols-1 lg:grid-cols-2">
             {
                 recipes.map(recipe => <div key={recipe.id}
-                    className="card bg-base-100 shadow-xl m-4">
+                    className="card bg-base-100 border-2 m-4">
                     <figure className="p-6">
                         <img className="w-full h-48 rounded-2xl"
                             src={recipe.recipe_image}
@@ -33,11 +33,17 @@ const Recipes = () => {
                         </ul>
                         <hr />
                         <div className="flex gap-5 mt-6">
-                            <p><i className="fa-regular fa-clock"></i> {recipe.preparing_time}</p>
-                            <p><i className="fa-solid fa-fire"></i> {recipe.calories}</p>
+                            <div className="flex gap-2 items-center">
+                                <i className="fa-regular fa-clock"></i>
+                                <p>{recipe.preparing_time} minutes.</p>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <i className="fa-solid fa-fire"></i>
+                                <p>{recipe.calories} calories.</p>
+                            </div>
                         </div>
                         <div className="card-actions justify-start mt-7">
-                            <button className="btn bg-green-400 rounded-3xl text-lg">Want to Cook</button>
+                            <button onClick={() => handleAddRecipeToCookTable(recipe)} className="btn bg-green-400 rounded-3xl text-lg">Want to Cook</button>
                         </div>
                     </div>
                 </div>)
