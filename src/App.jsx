@@ -9,10 +9,12 @@ const App = () => {
 
   const [recipeCookTable, setRecipeCookTable] = useState([]);
   const [cookingRecipe, SetCookingRecipe] = useState([]);
+  const [totalTime, SetTotalTime] = useState(0);
+  const [totalCalories, SetTotalCalories] = useState(0);
 
   const handleAddRecipeToCookTable = recipe => {
     const isExist = recipeCookTable.find(previousRecipe => previousRecipe.recipe_id === recipe.recipe_id)
-    if(!isExist) {
+    if (!isExist) {
       setRecipeCookTable([...recipeCookTable, recipe]);
     } else {
       alert('Recipe Already Exist in The Cook table.')
@@ -28,7 +30,12 @@ const App = () => {
     setRecipeCookTable(updatedRecipeCookTable);
     SetCookingRecipe([...cookingRecipe, removedRecipe]);
   }
-  
+
+  const handleCalculateTimeAndCalories = (time, calorie) => {
+    SetTotalTime(totalTime + time);
+    SetTotalCalories(totalCalories + calorie);
+  }
+
 
   return (
     <div className="container mx-auto">
@@ -43,7 +50,14 @@ const App = () => {
         {/* Recipe Card  section */}
         <Recipes handleAddRecipeToCookTable={handleAddRecipeToCookTable}></Recipes>
         {/* Sidebar Section */}
-        <Sidebar cookingRecipe={cookingRecipe} handleRemoveRecipe={handleRemoveRecipe} recipeCookTable={recipeCookTable}></Sidebar>
+        <Sidebar
+          handleCalculateTimeAndCalories={handleCalculateTimeAndCalories}
+          cookingRecipe={cookingRecipe}
+          handleRemoveRecipe={handleRemoveRecipe}
+          recipeCookTable={recipeCookTable}
+          totalTime={totalTime}
+          totalCalories={totalCalories}>
+        </Sidebar>
       </section>
     </div>
   );

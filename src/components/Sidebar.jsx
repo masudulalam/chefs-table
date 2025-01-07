@@ -1,4 +1,4 @@
-const Sidebar = ({ recipeCookTable, handleRemoveRecipe, cookingRecipe }) => {
+const Sidebar = ({ recipeCookTable, handleRemoveRecipe, cookingRecipe, handleCalculateTimeAndCalories, totalTime, totalCalories }) => {
 
     // const {recipe_name} = recipeCookTable;
     // console.log(recipe_name);
@@ -29,7 +29,11 @@ const Sidebar = ({ recipeCookTable, handleRemoveRecipe, cookingRecipe }) => {
                                     <td>{recipe.calories}</td>
                                     <td>
                                         <div className="card-actions justify-start mt-7">
-                                            <button onClick={() => handleRemoveRecipe(recipe.recipe_id)} className="btn bg-green-400 rounded-3xl">Preparing</button>
+                                            <button onClick={() => {
+                                                handleRemoveRecipe(recipe.recipe_id)
+                                                handleCalculateTimeAndCalories(recipe.preparing_time, recipe.calories)
+                                            }}
+                                                className="btn bg-green-400 rounded-3xl">Preparing</button>
                                         </div>
                                     </td>
                                 </tr>)
@@ -54,12 +58,15 @@ const Sidebar = ({ recipeCookTable, handleRemoveRecipe, cookingRecipe }) => {
                         {
                             cookingRecipe.map((recipe, index) =>
                                 <tr className="hover" key={index}>
-                                    <th>{index + 1}</th>
-                                    <td>{recipe.recipe_name}</td>
-                                    <td>{recipe.preparing_time}</td>
-                                    <td>{recipe.calories}</td>
+
                                 </tr>)
                         }
+                        <tr className="border-none">
+                            <th></th>
+                            <td></td>
+                            <td>Total Time: {totalTime} minutes</td>
+                            <td>Total Calories: {totalCalories} calories</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
